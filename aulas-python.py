@@ -8,7 +8,14 @@ divisaoInteira = n1 // n2
 exponenciacao = n1 ** n2
 raizQuadradaDeN1 = n1**(1/2)
 raizCubcaN1 = n1**(1/3)
-raizQuadradaDeN2 = n2**(1/2)
-raizCubcaN2 = n2**(1/3)
+
 
 print('A soma de {} com {} é igual a: {}'.format(n1, n2, soma))
+print("ola"*20)
+print('A divisão é : {}'.format(divisao))
+print('A subtracao é : {}'.format(subtracao))
+print('A multiplicacao é : {}'.format(multiplicacao))
+print('A divisaoInteira é : {}'.format( divisaoInteira))
+print('A exponenciacao é : {}'.format( exponenciacao))
+print('A raizQuadrada De N1 é : {}'.format( raizQuadradaDeN1))
+print('A raiz Cubca N1 é : {}'.format( raizCubcaN1))
