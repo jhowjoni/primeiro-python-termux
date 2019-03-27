@@ -14,6 +14,8 @@ listaLeste=[[0,-0.5,0],[-0.5,0,-0.5],[-0.5,0,0]]
 for i in range(0,len(listaLeste)):
     for j in range(0,len(listaLeste[i])):
         t =listaLeste[i][j]
-        print(t)
+        listaRetorno[i][j]  = float(t(r+(gama*1)))
+        print(listaRetorno)
+            
 
 
