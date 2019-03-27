@@ -19,3 +19,12 @@ print('A divisaoInteira é : {}'.format( divisaoInteira))
 print('A exponenciacao é : {}'.format( exponenciacao))
 print('A raizQuadrada De N1 é : {:.3f}'.format( raizQuadradaDeN1))
 print('A raiz Cubca N1 é : {:.3f}'.format( raizCubcaN1))
+
+print('*'*40)
+
+listaLeste=[[0,0.5,0],[0.5,0,0.5],[0.5,0,0]]
+#print(listaLeste)
+
+for i in range(0,len(listaLeste)):
+    for j in range(0,len(listaLeste[i])):
+        print(listaLeste[i][j])
