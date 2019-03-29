@@ -9,23 +9,40 @@ gama = 1
 r = -1
 epson = 0.0001
 
-listaLeste = [[0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0],
-              [0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0],
-              [0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0]]
+# posição 1 teste
+listaLeste = [[0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0]]
+             # [0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0],
+              #[0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0]]
+listaSul = [[0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+listaOeste = [[0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+listaNorte = [[0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0]]
 
+listaInicial = [[0]*10,[0]*10,[0]*10]
 listaNova = [[0]*10,[0]*10,[0]*10]
-print('\n')
-print(listaNova)
-print('\n')
+#print('\n')
+#print(listaInicial)
+#print('\n')
 
-for i in range(0, len(listaLeste)):
-    for j in range(0, len(listaLeste[i])):
-        t = listaLeste[i][i]
-        tn = listaLeste[i][j]
-        print('t :', t) 
-        print('tn :', tn)
-        listaNova[i][j] = (t *(r + (gama*listaNova[i][i]))) + (tn *(r + (gama*listaNova[i][j])))
+matriz = []
+listaNovaLeste =  [[0]*10]
+listaNovaSul =  [[0]*10]
+listaNovaOeste =  [[0]*10]
+listaNovaNorte =  [[0]*10]
 
+def moedorDeRegra(matriz, listaNova):
+    for i in range(0, len(matriz)):
+        for j in range(0, len(matriz[i])):
+            t = matriz[i][i]
+            tn = matriz[i][j]
+            listaNova[i][j] = (t *(r + (gama*listaInicial[i][i]))) + (tn *(r + (gama*listaInicial[i][j])))
+
+
+moedorDeRegra(listaLeste, listaNovaLeste)
+moedorDeRegra(listaSul, listaNovaSul)
+moedorDeRegra(listaOeste, listaNovaOeste)
+moedorDeRegra(listaNorte, listaNovaNorte)
+
+print(listaNovaLeste, listaNovaSul, listaNovaOeste, listaNovaNorte)
 
 print(listaNova)
 
